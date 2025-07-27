@@ -1,0 +1,10 @@
+[project]
+name = "bank-client-api"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.116.1",
+    "ruff>=0.12.5",
+    "sqlalchemy>=2.0.41",
+]
