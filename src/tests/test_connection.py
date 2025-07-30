@@ -4,7 +4,7 @@ from sqlalchemy import Engine
 from src.models.sqlite.settings.connection import db_connection_handler
 
 
-@pytest.mark.skip(reason="interação com o banco")
+@pytest.mark.skip(reason="interacao com banco de dados")
 def test_connect_to_db():
     assert db_connection_handler.engine is None
 
