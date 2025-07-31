@@ -2,7 +2,7 @@ from decimal import Decimal
 from sqlmodel import SQLModel, Field
 
 
-class IndividualsTable(SQLModel, table=True):
+class PessoaFisicaTable(SQLModel, table=True):
     """
     Represents an individual (physical person) entity mapped to the 'pessoa_fisica' table in the database.
 

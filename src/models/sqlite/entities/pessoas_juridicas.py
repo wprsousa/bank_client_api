@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Field, REAL
 
 
-class CorporatesTable(SQLModel, table=True):
+class PessoaJuricaTable(SQLModel, table=True):
     """
     Represents a corporate entity ("Pessoa Jurídica") mapped to the corresponding table in the database.
 
@@ -19,6 +19,7 @@ class CorporatesTable(SQLModel, table=True):
         __repr__():
             Returns a formatted string that represents the company for debugging and logging purposes.
     """
+
     id: int = Field(primary_key=True)
     faturamento: REAL
     idade: int
