@@ -30,6 +30,7 @@ class PessoaJuridicaRepository(ClientesRepositoryInterface):
                         saldo=saldo,
                     )
                 )
+                database.session.commit()
             except Exception as exception:
                 database.session.rollback()
                 raise exception

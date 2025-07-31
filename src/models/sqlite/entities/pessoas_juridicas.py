@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from sqlmodel import SQLModel, Field, REAL
 
 
@@ -19,15 +21,16 @@ class PessoaJuricaTable(SQLModel, table=True):
         __repr__():
             Returns a formatted string that represents the company for debugging and logging purposes.
     """
+    __tablename__ = "pessoa_juridica"
 
     id: int = Field(primary_key=True)
-    faturamento: REAL
+    faturamento: Decimal = Field(max_digits=5, decimal_places=2)
     idade: int
     nome_fantasia: str
     celular: str
     email_corporativo: str
     categoria: str
-    saldo: REAL
+    saldo: Decimal = Field(max_digits=5, decimal_places=2)
 
     def __repr__(self):
         return (
