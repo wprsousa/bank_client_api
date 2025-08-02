@@ -21,6 +21,7 @@ class PessoaJuricaTable(SQLModel, table=True):
         __repr__():
             Returns a formatted string that represents the company for debugging and logging purposes.
     """
+
     __tablename__ = "pessoa_juridica"
 
     id: int = Field(primary_key=True)

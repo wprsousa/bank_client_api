@@ -2,7 +2,9 @@ from unittest.mock import MagicMock
 import pytest
 
 from src.models.sqlite.entities.pessoas_juridicas import PessoaJuricaTable
-from src.models.sqlite.repositories.pessoas_juridicas_repository import PessoaJuridicaRepository
+from src.models.sqlite.repositories.pessoas_juridicas_repository import (
+    PessoaJuridicaRepository,
+)
 
 data = [
     PessoaJuricaTable(
@@ -13,7 +15,7 @@ data = [
         celular="11999999999",
         email_corporativo="contato@empresaa.com.br",
         categoria="Categoria A",
-        saldo=100000.00
+        saldo=100000.00,
     ),
     PessoaJuricaTable(
         id=2,
@@ -23,8 +25,8 @@ data = [
         celular="11999999999",
         email_corporativo="contato@empresab.com.br",
         categoria="Categoria B",
-        saldo=500000.00
-    )
+        saldo=500000.00,
+    ),
 ]
 
 
@@ -50,7 +52,7 @@ def test_criar_pessoa_juridica(mock_db_handler):
         celular="11999999999",
         email_corporativo="contato@empresab.com.br",
         categoria="Categoria B",
-        saldo=500000.00
+        saldo=500000.00,
     )
 
     args, kwargs = mock_session.add.call_args
@@ -101,7 +103,7 @@ def test_realizar_extrato(mock_db_handler):
     assert response == {
         "nome_fantasia": "Empresa B",
         "saldo": 500000.0,
-        "categoria": "Categoria B"
+        "categoria": "Categoria B",
     }
     assert isinstance(response, dict)
     mock_query.filter_by.assert_called_once_with(nome_fantasia="Empresa B")

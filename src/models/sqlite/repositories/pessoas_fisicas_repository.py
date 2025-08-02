@@ -9,14 +9,14 @@ class PessoasFisicasRepository(ClientesRepositoryInterface):
         self.__db_connection = db_connection
 
     def criar_pessoa_fisica(
-        self,
-        renda_mensal: float,
-        idade: int,
-        nome_completo: str,
-        celular: str,
-        email: str,
-        categoria: str,
-        saldo: float,
+            self,
+            renda_mensal: float,
+            idade: int,
+            nome_completo: str,
+            celular: str,
+            email: str,
+            categoria: str,
+            saldo: float,
     ) -> None:
         with self.__db_connection as database:
             try:
@@ -49,7 +49,7 @@ class PessoasFisicasRepository(ClientesRepositoryInterface):
                 database.session.rollback()
                 raise exception
 
-    def sacar_dinheiro(self, nome_completo, valor_saque):
+    def sacar_dinheiro(self, nome_completo: str, valor_saque: float) -> str:
         limite_saque = 5000
 
         saldo_atual = self.verificar_saldo(nome_completo)

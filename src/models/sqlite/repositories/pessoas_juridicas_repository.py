@@ -8,14 +8,14 @@ class PessoaJuridicaRepository(ClientesRepositoryInterface):
         self.__db_connection = db_connection
 
     def criar_pessoa_juridica(
-            self,
-            faturamento: float,
-            idade: int,
-            nome_fantasia: str,
-            celular: str,
-            email_corporativo: str,
-            categoria: str,
-            saldo: float,
+        self,
+        faturamento: float,
+        idade: int,
+        nome_fantasia: str,
+        celular: str,
+        email_corporativo: str,
+        categoria: str,
+        saldo: float,
     ) -> None:
         with self.__db_connection as database:
             try:
