@@ -18,7 +18,7 @@ def test_list_individuals():
 @pytest.mark.skip(reason="interacao com banco de dados")
 def test_create_individual():
     repo = ClientesRepository(db_connection_handler)
-    repo.criar_pessoa_fisica(
+    repo.insere_pessoa_fisica(
         7000.00,
         39,
         "Sicrano da Silva",

@@ -1,5 +1,3 @@
-import re
-
 from src.models.sqlite.repositories.pessoas_fisicas_repository import (
     PessoasFisicasRepository,
 )
@@ -29,16 +27,16 @@ class CriarPessoaFisicaController:
         return resposta_formatada
 
     def __insere_pessoa_fisica(
-            self,
-            renda_mensal: float,
-            idade: int,
-            nome_completo: str,
-            celular: str,
-            email: str,
-            categoria: str,
-            saldo: float,
+        self,
+        renda_mensal: float,
+        idade: int,
+        nome_completo: str,
+        celular: str,
+        email: str,
+        categoria: str,
+        saldo: float,
     ) -> None:
-        self.__pessoa_fisica_repository.criar_pessoa_fisica(
+        self.__pessoa_fisica_repository.insere_pessoa_fisica(
             renda_mensal, idade, nome_completo, celular, email, categoria, saldo
         )
 

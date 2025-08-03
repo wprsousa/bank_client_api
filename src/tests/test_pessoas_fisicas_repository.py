@@ -43,7 +43,7 @@ def test_criar_pessoa_fisica(mock_db_handler):
     mock_db, mock_session = mock_db_handler
 
     repo = PessoasFisicasRepository(mock_db)
-    repo.criar_pessoa_fisica(
+    repo.insere_pessoa_fisica(
         7000.00,
         39,
         "Sicrano da Silva",

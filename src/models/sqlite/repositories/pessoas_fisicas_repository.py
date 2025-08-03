@@ -8,15 +8,15 @@ class PessoasFisicasRepository(ClientesRepositoryInterface):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
-    def criar_pessoa_fisica(
-            self,
-            renda_mensal: float,
-            idade: int,
-            nome_completo: str,
-            celular: str,
-            email: str,
-            categoria: str,
-            saldo: float,
+    def insere_pessoa_fisica(
+        self,
+        renda_mensal: float,
+        idade: int,
+        nome_completo: str,
+        celular: str,
+        email: str,
+        categoria: str,
+        saldo: float,
     ) -> None:
         with self.__db_connection as database:
             try:

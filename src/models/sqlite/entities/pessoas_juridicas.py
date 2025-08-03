@@ -1,6 +1,6 @@
 from decimal import Decimal
 
-from sqlmodel import SQLModel, Field, REAL
+from sqlmodel import SQLModel, Field
 
 
 class PessoaJuricaTable(SQLModel, table=True):
