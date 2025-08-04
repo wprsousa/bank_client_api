@@ -5,14 +5,14 @@ from src.controllers.criar_pessoa_fisica_controller import CriarPessoaFisicaCont
 
 class MockRepository:
     def insere_pessoa_fisica(
-            self,
-            renda_mensal: float,
-            idade: int,
-            nome_completo: str,
-            celular: str,
-            email: str,
-            categoria: str,
-            saldo: float,
+        self,
+        renda_mensal: float,
+        idade: int,
+        nome_completo: str,
+        celular: str,
+        email: str,
+        categoria: str,
+        saldo: float,
     ) -> None:
         pass
 
@@ -51,7 +51,6 @@ def test_criar_pessoa_fisica_controller_invalid_nome_completo():
 
     with pytest.raises(Exception):
         controller.criar_pessoa_fisica(info_pessoa_fisica)
-
 
 
 def test_criar_pessoa_fisica_controller_invalid_rensa_mensal():

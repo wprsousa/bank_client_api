@@ -3,9 +3,12 @@ from src.models.sqlite.repositories.pessoas_fisicas_repository import (
 )
 
 from src.utils.validador import Validator
+from src.controllers.interfaces.criar_pessoa_fisica_controller import (
+    CriarPessoaFisicaControllerInterface,
+)
 
 
-class CriarPessoaFisicaController:
+class CriarPessoaFisicaController(CriarPessoaFisicaControllerInterface):
     def __init__(self, pessoa_fisica_repository: PessoasFisicasRepository):
         self.__pessoa_fisica_repository = pessoa_fisica_repository
 

@@ -2,9 +2,12 @@ from src.models.sqlite.repositories.pessoas_fisicas_repository import (
     PessoasFisicasRepository,
 )
 from src.utils.validador import Validator
+from src.controllers.interfaces.sacar_dinheiro_pessoa_fisica_controller import (
+    SacarDinheiroPessoaFisicaControllerInterface,
+)
 
 
-class SacarDinheiroPessoaFisicaController:
+class SacarDinheiroPessoaFisicaController(SacarDinheiroPessoaFisicaControllerInterface):
     def __init__(self, pessoa_fisica_repository: PessoasFisicasRepository) -> None:
         self.__pessoa_fisica_repository = pessoa_fisica_repository
 
